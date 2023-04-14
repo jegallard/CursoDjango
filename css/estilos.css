@@ -2,12 +2,14 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Open Sans', sans-serif
+    font-family: 'Roboto', sans-serif;
 }
 
 body{
-    font-family: sans-serif;
+    font-family: 'Roboto', sans-serif;
     margin: 0;
+
+    
 }
 
 
@@ -15,12 +17,28 @@ body{
 
 header{
     display: flex;
-    height: 100px;
-    background-color: lightgreen;
+    height: 45px;
+    background-color: #bfe9f9;
     justify-content: space-between ;
     align-items: center;
     padding: 10px;
+    line-height: 0;
 }
+
+
+.redes-header a{
+    text-decoration: none;
+    color: #001f28; 
+    font-weight: 600;
+    padding: 0 30px 0 30px;
+    transition: all 300ms ease;
+}
+
+.redes-header a:hover{
+    color: white;
+}
+
+/* NAVBAR */
 
 .logo img{
     height: 150px;
@@ -29,27 +47,15 @@ header{
     align-items: center;
 }
 
-.titulo-header{
-    text-decoration: none;
-    color: black;
-}
-
-.redes-header a{
-    text-decoration: none;
-    color: black;
-    font-weight: 600;
-    padding-right: 10px;
-    transition: all 300ms ease;
-}
-
-.redes-header a:hover{
-    color: aqua;
+.navbar-brand {
+    font-family: 'Red Hat Display', sans-serif;
+    letter-spacing: 2px;
 }
 
 @media (max-width: 700px){
     header{
         flex-direction: column;
-        height: auto;
+        height: 35px;
     }
     .titulo-header{
         padding-top: 15px;
@@ -60,7 +66,7 @@ header{
 /*MAIN NOSOTROS*/
 
 .container {
-    background-color: darkgreen;
+    background-color: #ffffff;
     width: 100%;
     max-width: 100%;
 
@@ -71,8 +77,8 @@ header{
 
 .container .content{
     grid-column: span 3;
-    background-color: rgb(77, 75, 75);
-    border: 2px solid black;
+    background-color:#d0e8d7;
+    border-radius: 20px;
     margin: 10px;
     padding: 20px;
 }
@@ -82,7 +88,7 @@ header{
     padding-top: 80px;
     padding-bottom: 40px;
     margin-top: 5px;
-    color: white;
+    color: #0b1f15;
 }
 
 .content .article h1 {
@@ -184,7 +190,7 @@ header{
 /* FOOTER */
 .pie-pagina{
     width: 100%;
-    background-color: lightgreen;
+    background-color: white;
 }
 
 .pie-pagina .grupo-1{
@@ -210,6 +216,13 @@ header{
     width: 150px;
 }
 
+@media screen and (max-width: 700px) {
+    .pie-pagina .grupo-1 .box figure img {
+        height: 100px;
+        width: 100px;
+    }
+}
+
 .pie-pagina .grupo-1 .box h2{
     margin-bottom: 25px;
     font-size: 20px;
@@ -220,25 +233,36 @@ header{
     margin-bottom: 10px;
 }
 
+/* redes body */
+@media screen and (max-width: 700px) {
+    .red-social {
+        text-align: center;
+        }
+    }
+
+
 .pie-pagina .grupo-1 .red-social a{
     display: inline-block;
     text-decoration: none;
     width: 45px;
     height: 45px;
     line-height: 45px;
-    color: rgb(0, 0, 0);
+    color: #0b1f15;
     margin-right: 10px;
-    background-color: rgb(151, 211, 136);
+    background-color: #d0e8d7;
     text-align: center;
     transition: all 300ms ease;
+    border-radius: 10px;
 }
 
 .pie-pagina .grupo-1 .red-social a:hover{
-    color: aqua;
+    color: white;
 }
 
+/* footer */
 .pie-pagina .grupo-2{
-    background-color: rgb(151, 211, 136) ;
+    color: #ffffff;
+    background-color:#4e6355 ;
     padding: 15px 10px;
     text-align: center;   
 }
@@ -280,23 +304,27 @@ header{
     box-shadow: 0 6px 6px rgba(0, 0, 0, 0.6);
 }
 
+
+/* BOTON PORTADA */
 .ver_mas {
     border: 1px solid #ffffff; /*anchura, estilo y color borde*/
     padding: 10px; /*espacio alrededor texto*/
-    background-color: transparent; /*color botón*/
-    color: #ffffff; /*color texto*/
+    background-color: #ffffff; /*color botón*/
+    color: #006c45; /*color texto*/
     text-decoration: none; /*decoración texto*/
     text-transform: uppercase; /*capitalización texto*/
-    font-family: 'Helvetica', sans-serif; /*tipografía texto*/
-    font-weight: bold;
+    border-color: #006c45;;
     border-radius: 50px; /*bordes redondos*/
-    height: 40px;
+    border-width: 1px;
     width: 200px;
     }
 
+/* TEXTO PORTADA */
 .regala_vida {
     font-size:600%;
-    letter-spacing: 4px;
-    color: #ffffff;
+    letter-spacing: 2px;
+    color: white;
+    font-family: 'Red Hat Display', sans-serif;
 }
+
 /* TERMINA INDEX */
