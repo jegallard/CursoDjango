@@ -84,20 +84,34 @@ header{
 }
 
 .content .article{
-    text-align: center;
-    padding-top: 80px;
-    padding-bottom: 40px;
+    text-align: left;
+    padding-top: 10px;
+    padding-bottom: 10px;
     margin-top: 5px;
-    color: #0b1f15;
+    color: #002112
 }
 
+.quienes-somos {
+    text-align: left;
+    padding-top: 40px;
+    padding-bottom: 10px;
+    margin-top: 5px;
+    color: #002112
+}
+
+
 .content .article h1 {
-    padding-bottom: 20px;
+    padding-bottom: 10px;
+    text-align: center;
+}
+
+.content .quienes-somos h1 {
+    padding-bottom: 10px;
     text-align: center;
 }
 
 .content .article p{
-    text-align: center;
+    text-align: left;
 }
 
 
@@ -135,6 +149,11 @@ header{
         grid-column: 1/-1;
     }
     
+}
+
+.carousel h5, .carousel p {
+    background-color: gray;
+    opacity: 0.8;
 }
 
 /* PRODUCTOS */
