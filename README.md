@@ -1,2 +1,0 @@
-#CursoDjango
-#Probando GitHub Pages!
