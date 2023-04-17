@@ -1,0 +1,93 @@
+{% extends './base.html' %} {% block titulo %}Inicio{% endblock titulo %}
+{%block estilo %} {% load static %}<link rel="stylesheet" href={% static
+"./publica/css/fondo_inicio.css" %}> {% endblock estilo %} {%block main %}
+{%load static %}
+<div>
+  <p></p>
+  <br /><br /><br /><br /><br />
+  <h1 class="regala_vida" align="center">
+    <span class="highlight"> REGALÁ VIDA </span>
+  </h1>
+
+  <br /><br /><br /><br /><br />
+  <p align="center">
+    <a href="productos.html"
+      ><button class="btn-lg shadow p-3 mb-5 bg-body-tertiary ver_mas">
+        Quiero mi nueva planta favorita
+      </button></a
+    >
+  </p>
+  <p></p>
+  <br /><br /><br /><br /><br />
+</div>
+
+<section class="features">
+  <div class="feature">
+    <i class="fas fa-leaf"></i>
+    <h2>Asesoramiento personalizado</h2>
+    <p>
+      Nuestros expertos te ayudarán a elegir la mejor planta para tu hogar y te
+      brindarán consejos para su cuidado.
+    </p>
+  </div>
+  <div class="feature">
+    <i class="fas fa-truck"></i>
+    <h2>Envío a domicilio</h2>
+    <p>
+      Te llevamos tus plantas y accesorios directo a tu hogar, con rapidez y
+      seguridad.
+    </p>
+  </div>
+  <div class="feature">
+    <i class="fas fa-headset"></i>
+    <h2>Servicio de postventa</h2>
+    <p>
+      Estamos aquí para ayudarte en todo momento, desde la compra hasta el
+      cuidado y mantenimiento de tus plantas.
+    </p>
+  </div>
+</section>
+
+<div class="pie-pagina">
+  <div class="grupo-1">
+    <div class="box">
+      <figure>
+        <img src={% static 'publica/img/Logo.png' %} alt="Logo de vivero" />
+      </figure>
+    </div>
+    <div class="box">
+      <h2>Acerca de nosotros</h2>
+      <p>
+        Somos un vivero con mucha buena onda y alegría. Llevamos a tu casa la
+        naturaleza para que puedas conectar con ella.
+      </p>
+    </div>
+    <div class="box">
+      <h2>Seguinos en nuestras redes</h2>
+      <div class="red-social">
+        <a
+          href="https://www.facebook.com/"
+          class="fa fa-facebook"
+          target="_blank"
+        ></a>
+        <a
+          href="https://www.instagram.com/puntohuertaok/"
+          class="fa fa-instagram"
+          target="_blank"
+        ></a>
+        <a
+          href="https://twitter.com/?lang=es"
+          class="fa fa-twitter"
+          target="_blank"
+        ></a>
+        <a
+          href="https://www.youtube.com/channel/UC0KEON-vDcBgbkjhIXh7hgQ"
+          class="fa fa-youtube"
+          target="_blank"
+        ></a>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% endblock main %}
