@@ -1,0 +1,108 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href={% static "./publica/css/estilos.css" %} />
+	{% block estilo %}{% endblock estilo %}
+    <link rel="stylesheet" href={% static "./publica/css/bootstrap.min.css"%} />
+    <script src={% static "./publica/js/bootstrap.min.js"%}></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Red+Hat+Display&family=Roboto&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/562201e81a.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>{% block titulo %}{% endblock titulo %}</title>    
+  </head>
+
+  <body>
+    <header>
+      <div class="redes-header">
+        <a
+          href="https://www.facebook.com/"
+          class="fa fa-facebook"
+          target="_blank"
+        ></a>
+        <a
+          href="https://www.instagram.com/puntohuertaok/"
+          class="fa fa-instagram"
+          target="_blank"
+        ></a>
+        <a
+          href="https://twitter.com/?lang=es"
+          class="fa fa-twitter"
+          target="_blank"
+        ></a>
+        <a
+          href="https://www.youtube.com/channel/UC0KEON-vDcBgbkjhIXh7hgQ"
+          class="fa fa-youtube"
+          target="_blank"
+        ></a>
+      </div>
+    </header>
+
+    <nav class="posicion-nav navbar navbar-expand-lg bg-light sticky-top">
+      <div class="container-fluid">
+        <a class="navbar-brand" href={% url 'inicio' %}>
+          <img src={% static "./publica/img/logo.png"%} alt="logo marca" width="50" height="auto" />
+          Botánica
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href={% url 'inicio' %}
+                >Inicio</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href={% url 'productos' %}>Productos</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href={% url 'nosotros' %}>Nosotros</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href={% url 'contacto' %}>Contacto</a>
+            </li>
+          </ul>
+          <div class="buttons">
+            <button class="login-button btn btn-outline-primary me-2">Iniciar sesión</button>
+            <button class="signup-button btn btn-primary" type="submit">Registrarse</button>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+	<main>
+		{% block main %}{% endblock main %}
+	</main>
+    
+    <footer class="pie-pagina">
+    	<div class="grupo-2">
+			<small>&copy; 2022 <b>BOTANICA</b> - Todos los Derechos Reservados.</small>
+      	</div>
+    </footer>
+
+    <!-- Scripts de JavaScript -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  </body>
+</html>
