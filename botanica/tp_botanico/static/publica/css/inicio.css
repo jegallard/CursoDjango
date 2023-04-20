@@ -1,0 +1,59 @@
+
+.portada{
+    background-color: hsla(0, 1%, 21%, 0.726);
+}
+
+.ver_mas {
+    border: 1px solid #ffffff; /*anchura, estilo y color borde*/
+    padding: 10px; /*espacio alrededor texto*/
+    background-color: #ffffff; /*color botón*/
+    color:  #27ae60; /*color texto*/
+    text-decoration: none; /*decoración texto*/
+    text-transform: uppercase; /*capitalización texto*/
+    border-color: #27ae60;
+    border-radius: 50px; /*bordes redondos*/    
+}
+
+.highlight2 {
+	color:  #27ae60;
+    text-shadow: #333 3px 2px;
+}
+
+/* TEXTO PORTADA */
+.regala_vida {
+    font-size:600%;
+    letter-spacing: 2px;
+    color: rgb(46, 44, 44);
+    font-family: 'Red Hat Display', sans-serif;
+}
+
+/* Sección Características de INICIO */
+
+.features {
+    display: flex;
+    justify-content: space-between;
+    padding: 50px 20px;
+    background-color: #f2f2f2;
+}
+  
+.feature {
+    flex-basis: 30%;
+    text-align: center;
+}
+  
+.feature i {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #333;
+}
+  
+.feature h2 {
+    font-size: 1.5rem;
+    margin: 0;
+    margin-bottom: 20px;
+}
+  
+.feature p {
+	font-size: 1.2rem;
+	margin: 0;
+}

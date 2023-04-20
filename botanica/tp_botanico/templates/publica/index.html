@@ -1,26 +1,39 @@
-{% extends './base.html' %} {% block titulo %}Inicio{% endblock titulo %}
-{%block estilo %} {% load static %}<link rel="stylesheet" href={% static
-"./publica/css/fondo_inicio.css" %}> {% endblock estilo %} {%block main %}
+{% extends './base.html' %} 
+
+{%block estilo %} 
+  {% load static %} 
+  <link rel="stylesheet" href={% static "./publica/css/inicio.css" %}> 
+{% endblock estilo %} 
+
+{% block titulo %}Inicio{% endblock titulo %}
+
+{% block line-style %}
+<style>		
+  body {
+    background: url({% static "./publica/img/fondo2.jpg" %}) no-repeat center top;
+    background-size: cover;	
+  }
+</style>
+{% endblock line-style %}
+
+{%block main %}
 {%load static %}
-<div>
-  <p></p>
-  <br /><br /><br /><br /><br />
+
+<div class="portada">
+  <br /><br /><br /><br />
   <h1 class="regala_vida" align="center">
-    <span class="highlight"> REGALÁ VIDA </span>
+    <span class="highlight2"> REGALÁ VIDA </span>
   </h1>
 
-  <br /><br /><br /><br /><br />
+  <br /><br /><br />
   <p align="center">
-    <a href="productos.html"
-      ><button class="btn-lg shadow p-3 mb-5 bg-body-tertiary ver_mas">
-        Quiero mi nueva planta favorita
-      </button></a
-    >
+    <a href={% url 'productos' %}>
+      <button class="btn-lg ver_mas">Quiero mi nueva planta favorita</button>
+    </a>
   </p>
-  <p></p>
-  <br /><br /><br /><br /><br />
+  
+  <br /><br />
 </div>
-
 <section class="features">
   <div class="feature">
     <i class="fas fa-leaf"></i>

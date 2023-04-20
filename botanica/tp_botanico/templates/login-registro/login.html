@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href={% static "./login-registro/css/login.css" %} />
+	<title>Iniciar sesión</title>
+	<style>		
+		body {
+			background: url({% static "./login-registro/img/fondo.jpg" %}) no-repeat center top;
+			background-size: cover;	
+		}
+	</style>
+</head>
+<body>
+	
+	<div class="login-box">
+		<img class="avatar" src="{% static "./publica/img/logo.png"%}" alt="">
+		<h1>Iniciar sesión</h1>
+		<form>
+			<label for="usuario">Usuario</label>
+			<input type="text" placeholder="Ingrese su usuario">
+
+			<label for="password">Contraseña</label>
+			<input type="password" placeholder="Ingrese su contraseña">
+
+			<input type="submit" value="INICIAR">
+
+			<a href="">¿Has olvidado tu contraseña?</a><br>
+			<a href="">Crear una cuenta</a>
+		</form>
+	</div>
+	
+</body>
+</html>
