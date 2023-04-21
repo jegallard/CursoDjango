@@ -9,10 +9,10 @@ body {
 }
 
 .ver_mas {
-    border: 1px solid #ffffff; /*anchura, estilo y color borde*/
+    border: 1px solid black; /*anchura, estilo y color borde*/
     padding: 10px; /*espacio alrededor texto*/
-    background-color: #ffffff; /*color botón*/
-    color:  #27ae60; /*color texto*/
+    background-color: #4e6355  ; /*color botón*/
+    color:  #fff; /*color texto*/
     text-decoration: none; /*decoración texto*/
     text-transform: uppercase; /*capitalización texto*/
     border-color: #27ae60;
