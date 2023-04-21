@@ -3,6 +3,11 @@
     background-color: hsla(0, 1%, 21%, 0.726);
 }
 
+body {
+    background: url("/static/publica/img/fondo2.jpg") no-repeat center top;
+    background-size: cover;	
+}
+
 .ver_mas {
     border: 1px solid #ffffff; /*anchura, estilo y color borde*/
     padding: 10px; /*espacio alrededor texto*/

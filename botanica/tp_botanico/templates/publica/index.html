@@ -2,19 +2,12 @@
 
 {%block estilo %} 
   {% load static %} 
-  <link rel="stylesheet" href={% static "./publica/css/inicio.css" %}> 
+  <link rel="stylesheet" href="{% static "./publica/css/inicio.css" %}?v=1.1"> 
 {% endblock estilo %} 
 
 {% block titulo %}Inicio{% endblock titulo %}
 
-{% block line-style %}
-<style>		
-  body {
-    background: url({% static "./publica/img/fondo2.jpg" %}) no-repeat center top;
-    background-size: cover;	
-  }
-</style>
-{% endblock line-style %}
+
 
 {%block main %}
 {%load static %}
