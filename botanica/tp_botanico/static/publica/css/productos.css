@@ -1,6 +1,6 @@
 .contenedor {
 	max-width: 1200px;
-	padding: 20px 10px;
+	padding: 10px;
 	margin: auto;
 	display: flex;
 	justify-content: space-between;
@@ -12,7 +12,7 @@
 	display: grid;
   	grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   	grid-gap: 30px 30px;
-	width: 60%;
+	width: 100%;
 	transition: .3s;	
 }
 
@@ -56,7 +56,7 @@
 	display: block;
 	margin: 10px auto;
 	border: none;
-	background: #4e6355 ;
+	background: black;
 	color: #fff;
 	padding: 5px 15px;
 	border-radius: 5px;
@@ -74,10 +74,12 @@
 	position: sticky !important;
 	top: 0;
 	transition: .3s;
+	opacity: 0;
+	margin-right: -100%;
 }
 
 .carrito .header-carrito{
-	background-color: #4e6355 ;
+	background-color: black;
 	color: #fff;
 	text-align: center;
 	padding: 15px 0;
@@ -175,7 +177,7 @@
 	display: block;
 	width: 100%;
 	border: none;
-	background: #4e6355 ;
+	background: black;
 	color: #fff;
 	border-radius: 5px;
 	font-size: 18px;
