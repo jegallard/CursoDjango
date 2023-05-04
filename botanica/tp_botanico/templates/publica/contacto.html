@@ -1,12 +1,23 @@
 {% extends './base.html' %} 
+{%block estilo %} 
+  {% load static %} 
+  <link rel="stylesheet" href="{% static "./publica/css/contacto.css" %}?v=1.1"> 
+{% endblock estilo %} 
 
 {% block titulo %}Contacto{% endblock titulo %}
 
 {%block main %}
-
-
-
-
-
-
+	<div class="contenedor-contacto">
+		<div class="contacto-caja">
+			<div class="caja-izq"></div>
+			<div class="caja-der">
+				<h2>Contacto</h2>
+				<form action="" method="post">
+					{% csrf_token %}
+   					{{ form }}
+					<button class="contacto-enviar">Enviar</button>					
+				</form>				
+			</div>
+		</div>
+	</div>	
 {% endblock main %}

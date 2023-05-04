@@ -66,8 +66,7 @@ function actualizarTotalCarrito(){
 		let precioItem = item.getElementsByClassName("carrito-item-precio")[0];
 		let precio = parseFloat(precioItem.innerHTML.replace("$","").replace(".","").replace(",","."));
 		let cantidadItem = item.getElementsByClassName("carrito-item-cantidad")[0];
-		let cantidad = cantidadItem.value;
-		
+		let cantidad = cantidadItem.value;		
 		total = total + (precio * cantidad);
 	}
 	total = Math.round(total*100)/100;
@@ -86,8 +85,7 @@ function ocultarCarrito(){
 
 		//maximizar el contenedor de los items
 		let items = document.getElementsByClassName("contenedor-items")[0];
-		items.style.width = "100%";
-		
+		items.style.width = "100%";		
 	}	
 }
 
@@ -102,7 +100,6 @@ function hacerVisibleCarrito(){
 }
 
 //Aumento de la cantidad de elemento seleccionado
-
 function sumarCantidad(event){
 	let botonClikeado = event.target;
 	let selector = botonClikeado.parentElement;
