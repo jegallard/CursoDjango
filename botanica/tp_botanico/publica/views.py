@@ -11,22 +11,50 @@ def nosotros(request):
     return render(request, 'publica/nosotros.html')
 
 def productos(request):
-    return render(request, 'publica/productos.html')
+    listado_productos = [
+        {
+            "titulo" : "Planta 1",
+            "imagen" : "{% static './publica/img/planta8.avif' %}",
+            "precio" : 1000
+        },
+        {
+            "titulo" : "Planta 2",
+            "imagen" : "{% static './publica/img/planta8.avif' %}",
+            "precio" : 1000
+        },
+        {
+            "titulo" : "Planta 3",
+            "imagen" : "{% static './publica/img/plantafb.jpg' %}",
+            "precio" : 1000
+        },
+        {
+            "titulo" : "Planta 4",
+            "imagen" : "{% static './publica/img/planta8.avif' %}",
+            "precio" : 1000
+        },
+        {
+            "titulo" : "Planta 5",
+            "imagen" : "{% static './publica/img/planta8.jpg' %}",
+            "precio" : 1000
+        },
+    ]
+    
+    return render(request, 'publica/productos.html', {"productos":listado_productos})
 
 def contacto(request):
+    mensaje = None #Ver clase 17
+    #Si recibe la URL por POST toma los datos del formulario
     if request.method == "POST":
-        # create a form instance and populate it with data from the request:
-        form = contacto_form(request.POST)
-        return HttpResponse("<h1>Perfecto</h1>")
-        # check whether it's valid:
-        #if form.is_valid():
-            # process the data in form.cleaned_data as required
-            # ...
-            # redirect to a new URL:
-            #return HttpResponseRedirect("/thanks/")
-    # if a GET (or any other method) we'll create a blank form
+        formContacto = contacto_form(request.POST)
+        #Se valida los datos is_valid()
+        if formContacto.is_valid():
+            pass
+            #messages.info(request,"!Aviso")        
+        else:
+          formContacto = contacto_form() 
+    #Si la URL es recibida por el metodo GET crea un formulario en blanco (sin datos)
     else:
-        form = contacto_form()
-    return render(request, "publica/contacto.html", {"form": form})
+        formContacto = contacto_form()
+    return render(request, "publica/contacto.html", {"form": formContacto})
     
 

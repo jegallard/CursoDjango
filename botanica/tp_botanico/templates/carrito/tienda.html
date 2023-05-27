@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="es">
+<head>
+    <meta name="viewport" content="width=device.width, initial-scale=1"
+    <meta charset="UTF-8">
+    <TItle>"BIENVENIDOS A LA TIENDA!!!"</TItle>
+    <!-- bootstrap-->
+    <link href="{% static 'bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+    <!-- styles-->
+    <link href="{% static 'bootstrap/css/estilos.css' %}" rel="stylesheet">
+
+</head>
+<body>
+   <div class = "container">
+      <div class="row">
+           <div class="col-12 align-self-center"><h1 class="display-1">TIENDA</h1></div>
+       </div>
+       <div class="row">
+            <div class="col-8">
+               <div class="row" style="padding: 10px 0;">
+                    <div class="col-12">
+                        <div class="row">
+                            productos
+                        </div>
+                    </div>
+                </div>        
+            </div>
+            <div class="col-4">
+                    carrito
+            </div>
+        </div>
+    </div>
+
+    <script src="{% static 'bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+</body>
+
+</html>

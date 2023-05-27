@@ -42,7 +42,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'publica',
-    'login_registro'
+    'login_registro',
+    'carrito'   
 ]
 
 MIDDLEWARE = [
