@@ -36,7 +36,12 @@ def productos(request):
             "titulo" : "Planta 5",
             "imagen" : "{% static './publica/img/planta8.jpg' %}",
             "precio" : 1000
-        },
+        },        
+        {
+            "titulo" : "Planta 6",
+            "imagen" : "{% static './publica/img/planta56.jpg' %}",
+            "precio": 545
+        }
     ]
     
     return render(request, 'publica/productos.html', {"productos":listado_productos})
