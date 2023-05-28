@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 from .forms import contacto_form
+from .models import Producto
 
 # Create your views here.
 
@@ -11,38 +12,7 @@ def nosotros(request):
     return render(request, 'publica/nosotros.html')
 
 def productos(request):
-    listado_productos = [
-        {
-            "titulo" : "Planta 1",
-            "imagen" : "{% static './publica/img/planta8.avif' %}",
-            "precio" : 1000
-        },
-        {
-            "titulo" : "Planta 2",
-            "imagen" : "{% static './publica/img/planta8.avif' %}",
-            "precio" : 1000
-        },
-        {
-            "titulo" : "Planta 3",
-            "imagen" : "{% static './publica/img/plantafb.jpg' %}",
-            "precio" : 1000
-        },
-        {
-            "titulo" : "Planta 4",
-            "imagen" : "{% static './publica/img/planta8.avif' %}",
-            "precio" : 1000
-        },
-        {
-            "titulo" : "Planta 5",
-            "imagen" : "{% static './publica/img/planta8.jpg' %}",
-            "precio" : 1000
-        },        
-        {
-            "titulo" : "Planta 6",
-            "imagen" : "{% static './publica/img/planta56.jpg' %}",
-            "precio": 545
-        }
-    ]
+    listado_productos = Producto.objects.all()
     
     return render(request, 'publica/productos.html', {"productos":listado_productos})
 

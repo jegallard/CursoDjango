@@ -14,8 +14,8 @@
 		<div class="contenedor-items">
 			{%for producto in productos%}
 				<div class="item">
-					<span class="titulo-item">{{producto.titulo}}</span>
-					<img src= {{producto.imagen}} alt="imagen del producto {{producto.titulo}}" class="img-item">
+					<span class="titulo-item">{{producto.nombre}}</span>
+					<img src= {{producto.imagen.url}} alt="imagen del producto {{producto.titulo}}" class="img-item">
 					<span class="precio-item">$ {{producto.precio}}</span>
 					<button class="boton-item">Agregar al carrito</button>
 				</div>			
