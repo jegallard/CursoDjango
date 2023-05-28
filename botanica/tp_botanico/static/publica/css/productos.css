@@ -12,7 +12,7 @@
 	display: grid;
   	grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   	grid-gap: 30px 30px;
-	width: 100%;
+	width: 80%;
 	transition: .3s;	
 }
 
@@ -61,10 +61,11 @@
 	padding: 5px 15px;
 	border-radius: 5px;
 	cursor: pointer;
+	text-decoration: none;
 }
 
 /* Carrito de compras */
-.carrito {
+.carrito2 {
 	border: 1px solid black;
 	width: 35%;
 	margin-top: 30px;
@@ -74,8 +75,20 @@
 	position: sticky !important;
 	top: 0;
 	transition: .3s;
-	opacity: 0;
-	margin-right: -100%;
+	
+}
+
+
+.carrito {
+	border: 1px solid black;
+	width: 35%;
+	margin-top: 30px;
+	border-radius: 10px;
+	overflow: hidden;
+	margin-bottom: auto;
+	position: sticky !important;
+	top: 0;
+	transition: .3s;	
 }
 
 .carrito .header-carrito{

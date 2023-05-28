@@ -2,7 +2,7 @@
 
 {%block estilo %} 
   {% load static %} 
-  <link rel="stylesheet" href="{% static "./publica/css/productos.css" %}?v=1.1"> 
+  <link rel="stylesheet" href="{% static "./publica/css/productos.css" %}?v=1.2"> 
 {% endblock estilo %} 
 
 {% block titulo %}Tienda online{% endblock titulo %}
@@ -17,7 +17,7 @@
 					<span class="titulo-item">{{producto.nombre}}</span>
 					<img src= {{producto.imagen.url}} alt="imagen del producto {{producto.titulo}}" class="img-item">
 					<span class="precio-item">$ {{producto.precio}}</span>
-					<button class="boton-item">Agregar al carrito</button>
+					<a href="{% url 'carrito:agregar' producto.id %}" class="boton-item">Agregar al carrito</a>
 				</div>			
 			{%endfor%}			
 		</div>
@@ -28,6 +28,29 @@
 				<h2>Tu carrito</h2>
 			</div>
 
+			{%if request.session.carrito.items %}
+						{%for key, value in request.session.carrito.items%}
+						<tr>
+							<div class="carrito-item">
+								<img src= {{value.imagen}}  alt="" width="80px">
+								<div class="carrito-item-detalle">
+									<span class="carrito-item-titulo">{{value.nombre}}</span>
+									<div class="selector-cantidad">
+										<a href="{% url 'carrito:restar' value.producto_id %}"><i class="fa-solid fa-minus restar-cantidad"></i></a>
+										<input type="text" value="{{value.cantidad}}" class="carrito-item-cantidad" disabled>
+										<a href="{% url 'carrito:agregar' value.producto_id %}"><i class="fa-solid fa-plus"></i></a>
+									</div>
+									<span class="carrito-item-precio">{{value.precio}}</span>
+								</div>
+								<a href="{% url 'carrito:eliminar' value.producto_id %}"><span class="btn-eliminar"><i class="fa-solid fa-trash"></i></span></a>
+							</div>
+						</tr>
+						{%endfor%}
+				{% else %}
+						<div class="alert alert-danger text-center m-1">
+							Sin productos
+						</div>
+				{%endif%}
 			<div class="carrito-items">
 				<!--
 				<div class="carrito-item">
@@ -54,10 +77,51 @@
 				<button class="btn-pagar">Pagar<i class="fa-solid fa-bag-shopping"></i></button>
 			</div>
 		</div>
+		
+		<!-- Carrito de compras prueba
+		<div class="carrito2">
+			<table class="table table-bordered">
+				<thead>
+					<tr>
+						<th colspan="3" class="text-center">
+							Carrito de compras
+						</th>
+					</tr>
+					<tr>
+						<th>Producto</th>
+						<th>Cantidad</th>
+						<th>Precio</th>
+					</tr>
+				</thead>
+
+				<tbody>
+					{%if request.session.carrito.items %}
+						{%for key, value in request.session.carrito.items%}
+						<tr>
+							<td>{{value.nombre}}</td>
+							<td>{{value.precio}}</td>
+						</tr>
+						{%endfor%}
+					{% else %}
+					<tr>
+						<td colspan=3>
+							<div class="alert alert-danger text-center">
+								Sin producto
+							</div>
+						</td>
+					</tr>
+					{% endif %}
+
+				</tbody>
+	
+			</table>
+		</div>
+		-->
+
 	</section>
 
 {% endblock main %}
 
 {% block jsScript %}
-<script src="{% static './publica/js/producto.js' %}"></script>
+<script src="{% static './publica/js/producto.js' %}?v=1.1"></script>
 {% endblock jsScript %}

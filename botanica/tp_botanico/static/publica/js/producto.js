@@ -1,6 +1,7 @@
+
 //Variable que mantiene el estado visible del carrito
 var carritoVisible = false;
-
+/*
 //Esperar que todos los elementos de la pagina carguen para ejecutar el script
 if(document.readyState="loading"){
 	document.addEventListener("DOMContentLoaded",ready);
@@ -72,7 +73,7 @@ function actualizarTotalCarrito(){
 	total = Math.round(total*100)/100;
 	document.getElementsByClassName("carrito-precio-total")[0].innerText= total;
 }
-
+*/
 //oculta el carrito cuando no hay elementos
 function ocultarCarrito(){
 	let carritoItems = document.getElementsByClassName("carrito-items")[0];
@@ -186,3 +187,4 @@ function pagarClick(){
 	//ocultar el carrito
 	ocultarCarrito()
 }
+
