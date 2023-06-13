@@ -1,0 +1,29 @@
+{% extends './baseLoginRegistro.html' %} 
+{% block formLoginRegistro %}
+{% load static %} 
+<div class="registro-box">
+	<div class="registro">
+		<img class="avatar" src="{% static "./publica/img/logo.png"%}" alt="">
+		<h1>Registrarme</h1>
+		<form method="POST" action="">
+			{% csrf_token %}
+			<label for="id_username">Usuario</label>
+			{{form.username}}
+			
+			<label for="id_password1">Contraseña</label>
+			{{form.password1}}
+			<p>Su contraseña:</p>
+			<ul>
+				<li>Debe contener al menos 8 caracteres.</li>
+				<li>No debe ser completamente númerica.</li>
+			</ul>
+			
+			<label for="id_password2">Repetir contraseña</label>
+			{{form.password2}}
+			
+			<input type="submit" value="REGISTRARSE">
+		</form>
+	</div>
+	
+</div>
+{% endblock formLoginRegistro %}

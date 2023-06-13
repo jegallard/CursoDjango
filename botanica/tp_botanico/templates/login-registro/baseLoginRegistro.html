@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="{% static "./login-registro/css/login.css" %}?v=1.1" />
+	<title>Iniciar sesión</title>
+	<style>		
+		body {
+			background: url({% static "./login-registro/img/fondo.jpg" %}) no-repeat center top;
+			background-size: cover;	
+		}
+	</style>
+</head>
+<body>
+	{% block formLoginRegistro %}
+	
+	{% endblock formLoginRegistro %}
+	
+	
+</body>
+</html>

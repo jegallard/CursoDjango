@@ -1,0 +1,14 @@
+.nosotros-descripcion{
+	background-color: rgba(0, 0, 0, 0.8);
+	border-radius: 15px;
+}
+
+.img-nosotros{
+	border-radius: 15px !important;
+	border: 1.5px solid black;
+}
+
+.img-nosotros:hover{
+	scale: 1.03;
+	transition: 0.3s;
+}

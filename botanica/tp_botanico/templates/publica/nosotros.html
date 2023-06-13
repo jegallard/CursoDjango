@@ -1,4 +1,8 @@
 {% extends './base.html' %}
+{%block estilo %} 
+  {% load static %} 
+  <link rel="stylesheet" href="{% static "./publica/css/nosotros.css" %}?v=1.1"> 
+{% endblock estilo %} 
 
 {% block titulo %}Nosotros{% endblock titulo %}
 
@@ -7,59 +11,58 @@
 {% load static %}
 
 <div class="container">
-    <main class="content">
-      <article class="quienes-somos">
-        <h1>¿Quiénes somos?</h1>
-        <p>En 2008 el Ingeniero Agrónomo Miguel Lijó junto a su hijo Sebastián, ambos colegas, comienzan su negocio de florería y vivero, primero cultivando plantas para los jardines que realizaban y luego ampliando su producción y distribución llegando a cada rincón de la ciudad de Mar del Plata. La primer locación fue en Juan B. Justo y San Juan, teniendo hoy en día 3 locales y un campo en las afueras de la ciudad. Hasta el día de hoy la empresa siempre tuvo continuidad familiar, sigue creciendo para la ciudad y sus habitantes.</p>
-      </article>
-      <article class="article">
-        <h1>Visión</h1>
-        <p>En Botánica Tienda de Plantas creemos en el valor de la Jardinería, el Paisajismo y el disfrute del tiempo libre rodeados de naturaleza, por eso día a día trabajamos para mejorar la experiencia de “habitar un espacio” rodeados de verde.</p>
-      </article>
-      <article class="article">
-        <h1>Misión</h1>
-        <p> Llevar a tu casa la naturaleza para que puedas conectar con ella sea cual sea el espacio que tengas. Buscamos que puedas tener el alimento de todos los días de manera orgánica, sin agroquímicos y además decorando cualquier rincón de tu hogar.</p>
+    <main class="content mb-3">
+      <section class="row d-flex justify-content-center">
+        <div class="col-lg-10 col-sm-12">
+          <h1>¿Quiénes somos?</h1>
+          <p>En 2008 el Ingeniero Agrónomo Miguel Lijó junto a su hijo Sebastián, ambos colegas, comienzan su negocio de florería y vivero, primero cultivando plantas para los jardines que realizaban y luego ampliando su producción y distribución llegando a cada rincón de la ciudad de Mar del Plata.</p>
+          <p>La primer locación fue en Juan B. Justo y San Juan, teniendo hoy en día 3 locales y un campo en las afueras de la ciudad. Hasta el día de hoy la empresa siempre tuvo continuidad familiar, sigue creciendo para la ciudad y sus habitantes.</p>
+        </div>
+      </section>
+
+      <section class="row my-5 d-flex justify-content-center">
+        <div class="col-lg-4 col-md-12 mx-5">
+          <h2>Visión</h2>
+          <p>
+            En Botánica Tienda de Plantas creemos en el valor de la Jardinería, el Paisajismo y el disfrute del tiempo libre rodeados de naturaleza, por eso día a día trabajamos para mejorar la experiencia de “habitar un espacio” rodeados de verde
+          </p>
+        </div>
+        <div class="col-lg-4 col-md-12">
+          <h2>Misión</h2>
+          <p>
+            Llevar a tu casa la naturaleza para que puedas conectar con ella sea cual sea el espacio que tengas. Buscamos que puedas tener el alimento de todos los días de manera orgánica, sin agroquímicos y además decorando cualquier rincón de tu hogar
+          </p>
+        </div>
+      </section>
+      <section class="row my-5 d-flex justify-content-center">
+      <div class="col-lg-4">
+        <div class="carousel-item active" data-bs-interval="10000">
+          <img src="{% static 'publica/img/Ingeniero-agrícola-trabajando-sobre-el-terreno.png' %}" class="img-nosotros d-block w-100" alt="..." >
+          <div class="carousel-caption d-none d-md-block nosotros-descripcion">
+            <h5>Ing. Miguel Lijó</h5>
+            <p>Fundador de Botánica</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4">
+        <div class="carousel-item active" data-bs-interval="10000">
+          <img src="{% static "publica/img/ingeniero agricola 2.png"%}" class="img-nosotros d-block w-100" alt="..." >
+          <div class="carousel-caption d-none d-md-block nosotros-descripcion">
+            <h5>Ing. Sebastián Lijó</h5>
+            <p>Cofundador de Botánica</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4">
+        <div class="carousel-item active" data-bs-interval="10000">
+          <img src="{% static "publica/img/vivero-05.png"%}" class=" img-nosotros d-block w-100" alt="..." >
+          <div class="carousel-caption d-none d-md-block nosotros-descripcion">
+            <h5>Primer vivero</h5>
+            <p>Av. Juan B. Justo y San Juan</p>
+          </div>
+        </div>
+      </div>
+      </section>         
     </main>
-  </div>
-  
-
-  <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-    <ol class="carousel-indicators">
-      <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-      <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-      <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-    </ol>
-    <div class="carousel-inner">
-      <div class="carousel-item active">
-        <img class="d-block w-100" src= {% static 'publica/img/Ingeniero-agrícola-trabajando-sobre-el-terreno.png' %} alt="Ingeniero-agrícola-trabajando-sobre-el-terreno">
-        <div class="carousel-caption">
-          <h5>Ing. Miguel Lijó</h5>
-          <p>Fundador de Botánica</p>
-        </div>
-      </div>
-      <div class="carousel-item">
-        <img class="d-block w-100" src={% static "publica/img/ingeniero agricola 2.png"%} alt="ingeniero agricola 2">
-        <div class="carousel-caption">
-          <h5>Ing. Sebastián Lijó</h5>
-          <p>Cofundador de Botánica</p>
-        </div>
-      </div>
-      <div class="carousel-item">
-        <img class="d-block w-100" src={% static "publica/img/vivero-05.png"%} alt="vivero">
-        <div class="carousel-caption">
-          <h5>Primer vivero</h5>
-          <p>Ubicado en Av. Juan B. Justo y San Juan</p>
-        </div>
-      </div>
-    </div>
-    <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-      <span class="sr-only">Anterior</span>
-    </a>
-    <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-      <span class="sr-only">Siguiente</span>
-    </a>
-  </div>
-
+   </div>  
 {% endblock main %}

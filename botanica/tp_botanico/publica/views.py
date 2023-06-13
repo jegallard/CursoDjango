@@ -11,6 +11,9 @@ def index(request):
 def nosotros(request):
     return render(request, 'publica/nosotros.html')
 
+def club(request):
+    return render(request, 'publica/club.html')
+
 def productos(request):
     listado_productos = Producto.objects.all()
     
